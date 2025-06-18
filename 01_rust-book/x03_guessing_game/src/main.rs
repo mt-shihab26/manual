@@ -1,14 +1,27 @@
+use std::cmp::Ordering::{Equal, Greater, Less};
+use std::io::stdin;
+
 fn main() {
-    let secret_number = stils::rand_range(1, 100);
+    let secret_number: u32 = stils::rand_range(1, 100) as u32;
 
-    println!("Secret number: {}", secret_number);
+    println!("Guess the number!");
 
-    println!("Guess the number!\nPlease input the guess");
+    loop {
+        println!("Please input the guess");
 
-    let mut guess = String::new();
-    std::io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+        let mut guess = String::new();
 
-    println!("You guessed: {}", guess);
+        stdin().read_line(&mut guess).expect("Failed to read line");
+
+        let guess_number: u32 = guess.trim().parse().expect("Please type a number");
+
+        match guess_number.cmp(&secret_number) {
+            Less => println!("Too small!"),
+            Greater => println!("Too big!"),
+            Equal => {
+                println!("You win!");
+                break;
+            }
+        }
+    }
 }
