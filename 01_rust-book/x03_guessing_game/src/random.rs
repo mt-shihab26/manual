@@ -4,7 +4,7 @@ pub fn rand() -> i64 {
     let mut state = SystemTime::now()
         .duration_since(UNIX_EPOCH)
         .expect("Time went backwards")
-        .as_secs() as i64;
+        .as_micros() as i64;
 
     state = state.wrapping_mul(1103515245).wrapping_add(12345) % 1000000007;
     if state < 0 {
