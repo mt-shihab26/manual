@@ -3,5 +3,14 @@
 version = 4
 
 [[package]]
+name = "stils"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "55a86da6ed60c6739e62013db57c2e5d7aef804030694dedf961e9d13e66a836"
+
+[[package]]
 name = "x03_guessing_game"
 version = "0.1.0"
+dependencies = [
+ "stils",
+]
