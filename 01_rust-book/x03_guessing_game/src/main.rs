@@ -3,7 +3,7 @@ mod random;
 fn main() {
     for _ in 0..100 {
         let result = random::rand();
-        println!("{}", result);
+        println!("{}", result % 100);
     }
 
     // let secret_number = random::rand();
