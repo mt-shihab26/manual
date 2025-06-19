@@ -1,5 +1,8 @@
+use rand::Rng;
+
 fn main() {
-    let secret_number: u32 = stils::rand_range(1, 100) as u32;
+    // let secret_number: u32 = stils::rand_range(1, 100) as u32;
+    let secret_number: u32 = rand::rng().random_range(1..=100);
 
     println!("Guess the number!");
 
