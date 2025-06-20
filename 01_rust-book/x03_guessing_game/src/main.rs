@@ -17,7 +17,7 @@ fn main() {
             .read_line(&mut guess)
             .expect("Failed to read line");
 
-        let guess_number: u32 = match guess.trim().parse() {
+        let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Type valid number");
@@ -25,7 +25,7 @@ fn main() {
             }
         };
 
-        match guess_number.cmp(&secret_number) {
+        match guess.cmp(&secret_number) {
             std::cmp::Ordering::Less => println!("Too small!"),
             std::cmp::Ordering::Greater => println!("Too big!"),
             std::cmp::Ordering::Equal => {
