@@ -1,4 +1,4 @@
-fn variable() {
+pub fn variable() {
     // variables //
     let mut x = 5;
     println!("The value of x is: {x}");
@@ -24,7 +24,21 @@ fn variable() {
 }
 
 fn data_types() {
-    let guess = "42".parse().expect("Not a number!");
+    let guess: u32 = "42".parse().expect("Not a number!");
+    println!("guess = {guess}");
+
+    // integer literals
+    let decimal = 123_45;
+    let hex = 0xff;
+    let octal = 0o77;
+    let binary = 0b1111_0000;
+    let byte_u8_only = b'A';
+
+    println!("decimal = {decimal}");
+    println!("hex = {hex}");
+    println!("octal = {octal}");
+    println!("binary = {binary}");
+    println!("byte_u8_only = {byte_u8_only}");
 }
 
 fn main() {
