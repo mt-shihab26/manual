@@ -103,10 +103,15 @@ pub fn compound_types() {
     println!("a = {a:?}");
     let a = [3; 5]; // [3, 3, 3, 3, 4]
     println!("a = {a:?}");
+
+    let first = a[0];
+    let second = a[1];
+    println!("first = {first}");
+    println!("second = {second}");
 }
 
 fn main() {
     // variable();
     // scalar_types();
-    compound_types();
+    // compound_types();
 }
