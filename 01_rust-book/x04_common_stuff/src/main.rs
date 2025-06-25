@@ -92,6 +92,11 @@ pub fn compound_types() {
     let tup = (400, 5.5, 1);
     let (x, y, z) = tup;
     println!("x = {x}, y = {y}, z = {z}");
+
+    let first_value = tup.0;
+    let second_value = tup.1;
+    let last_value = tup.2;
+    println!("first = {first_value}, second = {second_value}, third = {last_value}");
 }
 
 fn main() {
