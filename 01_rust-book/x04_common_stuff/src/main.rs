@@ -84,7 +84,18 @@ pub fn scalar_types() {
     println!("heart_eyed_chat = {heart_eyed_chat}");
 }
 
+pub fn compound_types() {
+    // tuple type
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    println!("tup = {tup:?}");
+
+    let tup = (400, 5.5, 1);
+    let (x, y, z) = tup;
+    println!("x = {x}, y = {y}, z = {z}");
+}
+
 fn main() {
     // variable();
-    scalar_types();
+    // scalar_types();
+    compound_types();
 }
