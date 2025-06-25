@@ -1,3 +1,7 @@
+fn type_of<T>(_: &T) -> &'static str {
+    std::any::type_name::<T>()
+}
+
 pub fn variable() {
     // variables //
     let mut x = 5;
@@ -23,7 +27,8 @@ pub fn variable() {
     println!("The length of spaces is: {spaces}");
 }
 
-pub fn data_types() {
+pub fn scalar_types() {
+    // integer data type
     let guess: u32 = "42".parse().expect("Not a number!");
     println!("guess = {guess}");
 
@@ -46,9 +51,40 @@ pub fn data_types() {
 
     println!("x = {x}");
     println!("y = {y}");
+
+    // numeric_operations
+    let sum = 5 + 10;
+    println!("sum = {sum}");
+
+    let difference = 95.5 - 4.3;
+    println!("difference = {difference}");
+
+    let quotient = 25.5 / 2.0;
+    println!("quotient = {quotient}, type_of = {}", type_of(&quotient));
+    let truncated = 25 / 2;
+    println!("truncated = {truncated}, type_of = {}", type_of(&truncated));
+
+    let reminder = 43 % 5;
+    println!("reminder = {reminder}, type_of = {}", type_of(&reminder));
+
+    // boolean_types
+    let t = true;
+    let f: bool = false; // explicit type annotation
+
+    println!("t = {t}");
+    println!("f = {f}");
+
+    // char_types
+    let c = 'z';
+    let z: char = 'ℤ';
+    let heart_eyed_chat = '😻';
+
+    println!("c = {c}");
+    println!("z = {z}");
+    println!("heart_eyed_chat = {heart_eyed_chat}");
 }
 
 fn main() {
     // variable();
-    data_types();
+    scalar_types();
 }
