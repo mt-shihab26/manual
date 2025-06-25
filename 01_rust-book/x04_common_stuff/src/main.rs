@@ -97,6 +97,12 @@ pub fn compound_types() {
     let second_value = tup.1;
     let last_value = tup.2;
     println!("first = {first_value}, second = {second_value}, third = {last_value}");
+
+    // array type
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("a = {a:?}");
+    let a = [3; 5]; // [3, 3, 3, 3, 4]
+    println!("a = {a:?}");
 }
 
 fn main() {
