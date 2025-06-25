@@ -23,7 +23,7 @@ pub fn variable() {
     println!("The length of spaces is: {spaces}");
 }
 
-fn data_types() {
+pub fn data_types() {
     let guess: u32 = "42".parse().expect("Not a number!");
     println!("guess = {guess}");
 
@@ -39,6 +39,13 @@ fn data_types() {
     println!("octal = {octal}");
     println!("binary = {binary}");
     println!("byte_u8_only = {byte_u8_only}");
+
+    // floating point data type
+    let x = 2.0; // f64;
+    let y: f32 = 3.0;
+
+    println!("x = {x}");
+    println!("y = {y}");
 }
 
 fn main() {
