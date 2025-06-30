@@ -39,7 +39,6 @@ pub fn repetation() {
 
 pub fn loop_label() {
     let mut count = 0;
-
     'counting_up: loop {
         println!("count = {count}");
         let mut remaining = 10;
@@ -49,7 +48,7 @@ pub fn loop_label() {
             if remaining == 9 {
                 break;
             }
-            if remaining == 2 {
+            if count == 2 {
                 break 'counting_up;
             }
             remaining -= 1;
@@ -61,7 +60,7 @@ pub fn loop_label() {
 }
 
 fn main() {
-    dicision();
+    // dicision();
     // repetation();
-    // loop_label();
+    loop_label();
 }
