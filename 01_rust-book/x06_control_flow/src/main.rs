@@ -59,8 +59,36 @@ pub fn loop_label() {
     println!("End count = {count}");
 }
 
+pub fn while_loop() {
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}");
+        number -= 1;
+    }
+    println!("LEFTOFF!!!")
+}
+
+pub fn foreach_loop() {
+    let elements = [10, 20, 30, 50];
+
+    for element in elements {
+        println!("the value is: {element}");
+    }
+}
+
+pub fn for_loop_countdown() {
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
+}
+
 fn main() {
     // dicision();
     // repetation();
-    loop_label();
+    // loop_label();
+    // while_loop();
+    // foreach_loop();
+    for_loop_countdown();
 }
